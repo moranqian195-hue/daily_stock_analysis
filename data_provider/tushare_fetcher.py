@@ -1215,12 +1215,12 @@ if __name__ == "__main__":
     
     try:
         # 测试历史数据
-        df = fetcher.get_daily_data('600519')  # 茅台
+        df = fetcher.get_daily_data('603598')  # 茅台
         print(f"获取成功，共 {len(df)} 条数据")
         print(df.tail())
         
         # 测试股票名称
-        name = fetcher.get_stock_name('600519')
+        name = fetcher.get_stock_name('603598')
         print(f"股票名称: {name}")
         
     except Exception as e:
