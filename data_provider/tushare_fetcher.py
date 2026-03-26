@@ -344,16 +344,16 @@ class TushareFetcher(BaseFetcher):
         转换股票代码为 Tushare 格式
         
         Tushare 要求的格式：
-        - 沪市股票：600519.SH
+        - 沪市股票：603598.SH
         - 深市股票：000001.SZ
         - 沪市 ETF：510050.SH, 563230.SH
         - 深市 ETF：159919.SZ
         
         Args:
-            stock_code: 原始代码，如 '600519', '000001', '563230'
+            stock_code: 原始代码，如 '603598', '000001', '563230'
             
         Returns:
-            Tushare 格式代码，如 '600519.SH', '000001.SZ', '563230.SH'
+            Tushare 格式代码，如 '603598.SH', '000001.SZ', '563230.SH'
         """
         raw_code = stock_code.strip()
         
@@ -1249,7 +1249,7 @@ if __name__ == "__main__":
     print("测试筹码分布数据获取")
     print("=" * 50)
     try:
-        chip = fetcher.get_chip_distribution('600519')  # 茅台
+        chip = fetcher.get_chip_distribution('603598')  # 茅台
     except Exception as e:
         print(f"[筹码分布] 获取失败: {e}")
 
